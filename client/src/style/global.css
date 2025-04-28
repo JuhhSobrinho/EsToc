@@ -1,0 +1,283 @@
+::-webkit-scrollbar {
+    width: 2px;
+    /* Largura da barra de rolagem */
+}
+
+/* Estilizando o "thumb" (a parte arrastável da barra de rolagem) */
+::-webkit-scrollbar-thumb {
+    background-color: #645FC6;
+    /* Cor do "thumb" */
+    border-radius: 6px;
+    /* Borda arredondada do "thumb" */
+}
+
+/* Estilizando a barra de rolagem quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-bg-color);
+    ;
+    /* Cor do "thumb" ao passar o mouse */
+}
+
+.menu-lateral-projects {
+    width: auto;
+    background-color: var(--main-bg-color);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+
+.titulo-coleçoes {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulos-planilha-quadro{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo-Quadros {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    color: #6F7482;
+}
+
+.line-quadro{
+    height: 2px;
+    width: 95%;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: var(--main-secun-color);
+}
+
+.coleções-projects {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quadro-selecionado {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0px 0px 0px 0px;
+    color: #6F7482;
+    width: 90px;
+    transition: 0.5s;
+}
+
+.quadro-selecionado:focus {
+    transition: 0.5s;
+    background-color: #645FC6;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+
+#criar-quadro:focus {
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.tema {
+    background-color: var(--main-secun-color);
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.luz-sol {
+    width: 15px;
+}
+
+.quadro-status {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-secun-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+
+.pesquisa-quadro{
+    width: 90%;
+    margin-bottom: 10px;
+
+}
+
+.titulo-pesquisa {
+    text-align: right;
+    width: 98%;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--main-pes-color);
+    background: rgba(68, 68, 80, 0);
+}
+
+.titulo-pesquisa:focus {
+    outline: #646cffaa;
+    border-color: #646cffaa;
+    color: #d3d3d3;
+}
+
+.titulo-pesquisa::placeholder {
+    color: var(--main-pes-color); /* ou qualquer cor que combine com o tema */
+  }
+
+.grafico-validade {
+    display: flex;
+    width: 90%;
+    height: 35vh auto;
+    justify-content: space-between;
+}
+
+.quadro-grafico {
+    height: 250px;
+    width: 45%;
+}
+
+.quadro-posts {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 50vh;
+    overflow: auto;
+}
+
+.card-post {
+    background-color: var(--main-bg-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo-post {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+
+.status-post {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    opacity: 40%;
+}
+
+#add-quadro-post {
+    align-items: center;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+}
+
+#novo-card-post {
+    align-items: center;
+    text-align: center;
+}
+
+.descricao-post {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo-taks {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin-left: 5px;
+}
+
+.card-taks {
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-secun-color);
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.main-usuario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.quadro-usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil{
+    width:350px;
+    border-radius: 360px;
+    border: #645FC6 2px solid;
+}
+
+.bottons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    width: 100%;
+}
+
+.table-membros{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.listar-membros{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+  

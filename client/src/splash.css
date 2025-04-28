@@ -1,0 +1,43 @@
+.splash-screen {
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  margin: 0;
+  width: 100vmax;
+  height: 100vh;
+  background-color: var(--main-secun-color);
+  position: fixed;
+  transition: opacity 1s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  border-radius: 5px;
+}
+
+.titulo {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--main-text-color);
+  margin: 0;
+  border-bottom: 2px solid;
+  border-color: #646cffaa;
+}

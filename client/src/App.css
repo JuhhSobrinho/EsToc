@@ -1,0 +1,152 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  z-index: 0;
+  background-color: #21212d;
+}
+
+
+.App {
+  --main-bg-color: var(--main-bg-color-dark);
+  --main-text-color: var(--main-text-color-dark);
+  --main-secun-color: var(--main-secun-color-dark);
+  z-index: 1;
+  text-align: center;
+  width: 100vmax;
+  height: 100vh;
+  background-color: var(--main-secun-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.form-login {
+  background-color: var(--main-bg-color);
+  width: 600px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-login {
+  margin: 5px;
+  color: var(--main-text-color);
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.input-dados {
+  text-decoration: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #444450;
+  background: rgba(68, 68, 80, 0);
+  color: var(--main-text-color);
+}
+
+.input-dados:focus {
+  outline: #646cffaa;
+  border-color: #646cffaa;
+  color: var(--main-text-color);
+}
+
+
+.card {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-logar {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.btn-login-singUp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.btn-mudar-tela {
+  overflow: hidden;
+  transition: 1s;
+  cursor: pointer;
+  color: #888;
+  font-size: 12px;
+}
+
+.btn-mudar-tela:hover {
+  transition: 0.5s;
+  color: #645fc6;
+  border-bottom: 1px solid #645fc6;
+}
+
+.btn-luz, .btn-luz:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+.luz {
+  width: 50px;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #645fc6;
+  background-color: var(--main-bg-color);
+  color: #6F7482;
+}
+select {
+  background-color: var(--main-bg-color);
+  color: #6F7482;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
