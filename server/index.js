@@ -14,7 +14,7 @@ app.use('/produtos', produtosRoutes);
 app.use('/users', usersRoutes);
 
 // Inicializar o servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta http://localhost:${PORT}`);
 });
