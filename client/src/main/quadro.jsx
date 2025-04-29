@@ -23,6 +23,8 @@ export function Quadro({ quadroId }) {
   const [selectedQuadroVenc, setSelectedQuadroVenc] = useState(null);
   const [selectedQuadroProd, setSelectedQuadroProd] = useState(null);
 
+  const [termoBusca, setTermoBusca] = useState("");
+
   const themeStyles = isChecked ? lightTheme : darkTheme;
   const email = localStorage.getItem("email");
 
@@ -73,14 +75,15 @@ export function Quadro({ quadroId }) {
     }
   }, [quadroId]);
 
-
   const handleRemoverProduto = async (idProduto) => {
-    const confirmar = window.confirm("Tem certeza que deseja remover este produto?");
-  
+    const confirmar = window.confirm(
+      "Tem certeza que deseja remover este produto?"
+    );
+
     if (!confirmar) {
       return; // Não faz nada se o usuário cancelar
     }
-  
+
     try {
       await deletarProduto(idProduto); // Espera a exclusão ser concluída
       toast.success("Produto removido com sucesso!", {
@@ -105,7 +108,6 @@ export function Quadro({ quadroId }) {
       });
     }
   };
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -123,6 +125,11 @@ export function Quadro({ quadroId }) {
     fetchData();
   }, []);
 
+  const produtosFiltrados = produtos.filter((produto) =>
+    produto.nome.toLowerCase().includes(termoBusca.toLowerCase())
+  );
+  
+
   return (
     <>
       <SplashScreen />
@@ -133,6 +140,8 @@ export function Quadro({ quadroId }) {
               className="titulo-pesquisa"
               type="text"
               placeholder="Pesquisar"
+              value={termoBusca}
+              onChange={(e) => setTermoBusca(e.target.value)}
             />
           </section>
           <section className="grafico-validade">
@@ -182,7 +191,7 @@ export function Quadro({ quadroId }) {
                 <span className="titulo-Quadros"> Btn-Remover</span>
               </section>
               <div className="line-quadro"></div>
-              {produtos.map((produto) => (
+              {produtosFiltrados.map((produto) => (
                 <section className="titulos-planilha-quadro" key={produto.id}>
                   <span className="titulo-Quadros">{produto.nome}</span>
                   <span className="titulo-Quadros">R${produto.preco}</span>
@@ -193,12 +202,12 @@ export function Quadro({ quadroId }) {
                   <span className="titulo-Quadros">{produto.quantidade}</span>
                   <span className="titulo-Quadros">{produto.tipos?.nome}</span>
                   <button
-                  className="titulo-Quadros"
-                  key={"btn-" + produto.id}
-                  onClick={() => handleRemoverProduto(produto.id)}
-                >
-                  Remover
-                </button>
+                    className="titulo-Quadros"
+                    key={"btn-" + produto.id}
+                    onClick={() => handleRemoverProduto(produto.id)}
+                  >
+                    Remover
+                  </button>
                 </section>
               ))}
             </section>
