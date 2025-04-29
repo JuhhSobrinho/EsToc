@@ -15,7 +15,6 @@ const savedTheme = localStorage.getItem("theme") || "dark";
 export function Quadro({ quadroId }) {
   const [isChecked, setIsChecked] = useState(savedTheme);
   const [produtos, setProdutos] = useState([]);
-  const [produtosVencendo, setProdutosVencendo] = useState([]);
   const [graficoDataVenc, setgraficoDataVenc] = useState([]);
   const [graficoDataTipo, setgraficoDataTipo] = useState([]);
 
@@ -114,7 +113,6 @@ export function Quadro({ quadroId }) {
       try {
         const data = await getProdutosSeparados();
         setProdutos(data.todos);
-        setProdutosVencendo(data.vencendo);
         setgraficoDataVenc(data.vencendoPorPeriodo);
         setgraficoDataTipo(data.quantidadePorTipo);
       } catch (error) {
