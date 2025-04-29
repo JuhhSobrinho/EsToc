@@ -8,7 +8,7 @@ import { CadastroProduto } from "../componets/quadroCadastroProduto";
 import { QuadroUsuario } from "../componets/quadroUsuario";
 import { ChartAddGrupo } from "../componets/chartAddGrupo";
 import { lightTheme, darkTheme } from "../style/theme";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 const savedTheme = localStorage.getItem("theme") || "dark";
 
