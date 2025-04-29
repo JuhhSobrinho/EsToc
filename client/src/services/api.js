@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://estoc-production.up.railway.app:8080';
 import md5 from "md5";
 const uid = localStorage.getItem('uid');
 
