@@ -4,7 +4,7 @@ const uid = localStorage.getItem('uid');
 
 export const getProdutosSeparados = async () => {
   try {
-    // 1. Requisição para todos os produtos
+    console.log("UID atual antes da requisição:", uid);
     const [todosRes, vencendoRes, periodoRes, quantidadeRes, tiposRes] = await Promise.all([
       fetch(`${API_URL}/produtos/?uid=${uid}`),
       fetch(`${API_URL}/produtos/todos-com-vencendo?uid=${uid}`),
