@@ -22,7 +22,7 @@ Este projeto é um sistema web para controle de estoque, desenvolvido como parte
 
 ### Back-end
 - [Supabase](https://supabase.com/) (banco de dados e autenticação)
-- [Railway].(https://railway.com/project/4ba1ecbf-d623-4222-a832-7e45db7da8d6/service/c9121cdc-656a-416a-b687-511832909338?environmentId=8c738e6b-148d-4349-bf0e-8571913d4b0f). (servidor Banco de dados)
+- [Railway](https://railway.com/project/4ba1ecbf-d623-4222-a832-7e45db7da8d6/service/c9121cdc-656a-416a-b687-511832909338?environmentId=8c738e6b-148d-4349-bf0e-8571913d4b0f). (servidor Banco de dados)
 
 ### Outros
 - Firebase (se aplicável para autenticação)
